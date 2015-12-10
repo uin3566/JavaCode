@@ -32,6 +32,12 @@ public class Main {
             int num = l.lengthOfLongestSubstring("gehmbfqmozbpripibusbezagafqtypz");
             System.out.println("lengthOfLongestSubstring:" + num);
         }
+
+        public static void testLengthOfLongestSubstringKDistinct(){
+            LengthOfLongestSubstringKDistinct l = new LengthOfLongestSubstringKDistinct();
+            int num = l.lengthOfLongestSubstringKDistinct("eceba", 3);
+            System.out.println("lengthOfLongestSubstring:" + num);
+        }
     }
 
     /**
@@ -39,6 +45,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.testLengthOfLongestSubstring();
+        Test.testLengthOfLongestSubstringKDistinct();
     }
 }
