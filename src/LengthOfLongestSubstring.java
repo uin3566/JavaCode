@@ -19,10 +19,15 @@ public class LengthOfLongestSubstring {
         }
 
         int curSize = 0;
+        int fromIndex = 0;
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (charMap.containsKey(ch)) {
-                charMap.clear();
+                int curIndex = s.indexOf(ch, fromIndex);
+                for (int k = fromIndex; k <= curIndex; k++){
+                    charMap.remove(s.charAt(k));
+                }
+                fromIndex = curIndex + 1;
                 charMap.put(ch, 1);
             } else {
                 charMap.put(ch, 1);
