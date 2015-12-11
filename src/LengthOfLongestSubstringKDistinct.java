@@ -19,35 +19,25 @@ public class LengthOfLongestSubstringKDistinct {
 
         Map<Character, Integer> charMap = new HashMap<>();
         int longestLength = 0;
-        int curLength = 0;
-        int fromIndex = 0;
-
+        int start = 0;
         for (int i = 0; i < s.length(); i++){
             char ch = s.charAt(i);
-            if (charMap.containsKey(ch)){
+            if (charMap.containsKey(ch)) {
                 charMap.put(ch, charMap.get(ch) + 1);
-                curLength++;
             } else {
-                if (charMap.size() == k){
-                    curLength = i - fromIndex;
-                    if (curLength > longestLength){
-                        longestLength = curLength;
-                    }
-                    char first = s.charAt(fromIndex);
-                    if (charMap.get(first) > 1) {
-                        fromIndex = s.lastIndexOf(first, i);
-                    } else {
-                        fromIndex += 1;
-                    }
-                    curLength = i - fromIndex;
-                    charMap.remove(first);
-                }
                 charMap.put(ch, 1);
-                longestLength++;
             }
-
-            if (curLength > longestLength){
-                longestLength = curLength;
+            if (charMap.size() <= k) {
+                longestLength = Math.max(longestLength, i - start + 1);
+            } else {
+                while (charMap.size() > k) {
+                    char atStart = s.charAt(start);
+                    charMap.put(atStart, charMap.get(atStart) - 1);
+                    if (charMap.get(atStart) == 0){
+                        charMap.remove(atStart);
+                    }
+                    start++;
+                }
             }
         }
 

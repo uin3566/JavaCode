@@ -35,7 +35,7 @@ public class Main {
 
         public static void testLengthOfLongestSubstringKDistinct(){
             LengthOfLongestSubstringKDistinct l = new LengthOfLongestSubstringKDistinct();
-            int num = l.lengthOfLongestSubstringKDistinct("eceba", 3);
+            int num = l.lengthOfLongestSubstringKDistinct("eqgkcwGFvjjmxutystqdfhuMblWbylgjxsxgnoh", 16);
             System.out.println("lengthOfLongestSubstring:" + num);
         }
     }
