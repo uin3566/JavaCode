@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * @(#)Main.java
  *
@@ -38,6 +40,15 @@ public class Main {
             int num = l.lengthOfLongestSubstringKDistinct("eqgkcwGFvjjmxutystqdfhuMblWbylgjxsxgnoh", 16);
             System.out.println("lengthOfLongestSubstring:" + num);
         }
+
+        public static void testAnagrams(){
+            Anagrams a = new Anagrams();
+            String[] strs = new String[]{"lint","intl","inlt","code"};
+            List<String> results = a.anagrams(strs);
+            for (String str : results) {
+                System.out.println(str);
+            }
+        }
     }
 
     /**
@@ -45,6 +56,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.testLengthOfLongestSubstringKDistinct();
+        Test.testAnagrams();
     }
 }
