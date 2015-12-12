@@ -58,11 +58,22 @@ public class Main {
             System.out.println("num:" + num + ",isHappy? " + b);
         }
 
-        public static void SubarraySum(){
+        public static void subarraySum(){
             SubarraySum s = new SubarraySum();
             int[] nums = new int[]{-3, 1, 2, -3, 4};
             ArrayList<Integer> list = s.subarraySum(nums);
             System.out.print(list.get(0) + " to " + list.get(1));
+        }
+
+        public static void reHashing(){
+            Rehashing r = new Rehashing();
+            ArrayList<Integer> numbers = new ArrayList<>();
+            numbers.add(21);
+            numbers.add(9);
+            numbers.add(14);
+            ListNode[] hashTable = new ListNode[4];
+            r.putNumbers(hashTable, numbers);
+            ListNode[] newTable = r.rehashing(hashTable);
         }
     }
 
@@ -71,6 +82,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.SubarraySum();
+        Test.reHashing();
     }
 }
