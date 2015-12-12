@@ -17,7 +17,7 @@ public class Main {
     }
 
     private static class Test{
-        public static void testMaxPoints(){
+        public static void maxPoints(){
             //(1, 2), (3, 6), (0, 0), (1, 3)
             Point[] points = new Point[4];
             points[0] = new Point(1, 2);
@@ -29,25 +29,32 @@ public class Main {
             System.out.println("max point count:" + num);
         }
 
-        public static void testLengthOfLongestSubstring(){
+        public static void lengthOfLongestSubstring(){
             LengthOfLongestSubstring l = new LengthOfLongestSubstring();
             int num = l.lengthOfLongestSubstring("gehmbfqmozbpripibusbezagafqtypz");
             System.out.println("lengthOfLongestSubstring:" + num);
         }
 
-        public static void testLengthOfLongestSubstringKDistinct(){
+        public static void lengthOfLongestSubstringKDistinct(){
             LengthOfLongestSubstringKDistinct l = new LengthOfLongestSubstringKDistinct();
             int num = l.lengthOfLongestSubstringKDistinct("eqgkcwGFvjjmxutystqdfhuMblWbylgjxsxgnoh", 16);
             System.out.println("lengthOfLongestSubstring:" + num);
         }
 
-        public static void testAnagrams(){
+        public static void anagrams(){
             Anagrams a = new Anagrams();
             String[] strs = new String[]{"lint","intl","inlt","code"};
             List<String> results = a.anagrams(strs);
             for (String str : results) {
                 System.out.println(str);
             }
+        }
+
+        public static void isHappy(){
+            IsHappy i = new IsHappy();
+            int num = 19;
+            boolean b = i.isHappy(num);
+            System.out.println("num:" + num + ",isHappy? " + b);
         }
     }
 
@@ -56,6 +63,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.testAnagrams();
+        Test.isHappy();
     }
 }
