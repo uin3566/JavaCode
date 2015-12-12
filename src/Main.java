@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,6 +57,13 @@ public class Main {
             boolean b = i.isHappy(num);
             System.out.println("num:" + num + ",isHappy? " + b);
         }
+
+        public static void SubarraySum(){
+            SubarraySum s = new SubarraySum();
+            int[] nums = new int[]{-3, 1, 2, -3, 4};
+            ArrayList<Integer> list = s.subarraySum(nums);
+            System.out.print(list.get(0) + " to " + list.get(1));
+        }
     }
 
     /**
@@ -63,6 +71,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.isHappy();
+        Test.SubarraySum();
     }
 }
