@@ -75,6 +75,19 @@ public class Main {
             r.putNumbers(hashTable, numbers);
             ListNode[] newTable = r.rehashing(hashTable);
         }
+
+        public static void randomList(){
+            RandomList r = new RandomList();
+            RandomListNode node1 = new RandomListNode(1);
+            RandomListNode node2 = new RandomListNode(2);
+            RandomListNode node3 = new RandomListNode(3);
+            node1.next = node2;
+            node2.next = node3;
+            node1.random = node3;
+            node2.random = null;
+            node3.random = node2;
+            RandomListNode copyHead = r.copyRandomList(node1);
+        }
     }
 
     /**
@@ -82,6 +95,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.reHashing();
+        Test.randomList();
     }
 }
