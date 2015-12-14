@@ -91,7 +91,12 @@ public class Main {
 
         public static void fourSum(){
             FourSum f = new FourSum();
-            f.fourSum(new int[]{1,0,-1,-1,-1,-1,0,1,1,1,2}, 2);
+            f.fourSum(new int[]{1, 0, -1, -1, -1, -1, 0, 1, 1, 1, 2}, 2);
+        }
+
+        public static void twoSum(){
+            TwoSum t = new TwoSum();
+            t.twoSum(new int[]{2, 7, 11, 15}, 9);
         }
     }
 
@@ -100,6 +105,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.fourSum();
+        Test.twoSum();
     }
 }
