@@ -88,6 +88,11 @@ public class Main {
             node3.random = node2;
             RandomListNode copyHead = r.copyRandomList(node1);
         }
+
+        public static void fourSum(){
+            FourSum f = new FourSum();
+            f.fourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
+        }
     }
 
     /**
@@ -95,6 +100,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.randomList();
+        Test.fourSum();
     }
 }
