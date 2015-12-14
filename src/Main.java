@@ -91,7 +91,7 @@ public class Main {
 
         public static void fourSum(){
             FourSum f = new FourSum();
-            f.fourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
+            f.fourSum(new int[]{1,0,-1,-1,-1,-1,0,1,1,1,2}, 2);
         }
     }
 
