@@ -109,6 +109,11 @@ public class Main {
             }
             m.majorityNumber(arrayList, 13);
         }
+
+        public static void MinWindow(){
+            MinWindow m = new MinWindow();
+            m.minWindow("abc", "a");
+        }
     }
 
     /**
@@ -116,6 +121,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.MajorityNumber();
+        Test.MinWindow();
     }
 }
