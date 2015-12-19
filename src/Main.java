@@ -114,6 +114,15 @@ public class Main {
             MinWindow m = new MinWindow();
             m.minWindow("abc", "a");
         }
+
+        public static void RemoveElements(){
+            RemoveElements r = new RemoveElements();
+            ListNode node1 = new ListNode(1);
+            ListNode node2 = new ListNode(1);
+            node1.next = node2;
+            node2.next = null;
+            r.removeElements(node1, 1);
+        }
     }
 
     /**
@@ -121,6 +130,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.MinWindow();
+        Test.RemoveElements();
     }
 }
