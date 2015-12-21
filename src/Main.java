@@ -136,6 +136,19 @@ public class Main {
             n4.next = null;
             s.swapPairs(n1);
         }
+
+        public static void IsPalindrome(){
+            IsPalindrome i = new IsPalindrome();
+            ListNode n1 = new ListNode(1);
+            ListNode n2 = new ListNode(4);
+            ListNode n3 = new ListNode(1);
+            ListNode n4 = new ListNode(1);
+            n1.next = n2;
+            n2.next = n3;
+            n3.next = null;
+            n4.next = null;
+            i.isPalindrome(n1);
+        }
     }
 
     /**
@@ -143,6 +156,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.SwapPairs();
+        Test.IsPalindrome();
     }
 }
