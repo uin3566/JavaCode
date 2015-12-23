@@ -211,6 +211,15 @@ public class Main {
             y3.next = y4;
             m.mergeTwoLists(null, y1);
         }
+
+        public static void DeleteDuplicates(){
+            ListNode x1 = new ListNode(1);
+            ListNode x2 = new ListNode(1);
+            ListNode x3 = new ListNode(5);
+            x1.next = x2;
+            x2.next = x3;
+            DeleteDuplicates.deleteDuplicates(x1);
+        }
     }
 
     /**
@@ -218,6 +227,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.MergeTwoLists();
+        Test.DeleteDuplicates();
     }
 }
