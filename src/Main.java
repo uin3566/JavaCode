@@ -231,6 +231,15 @@ public class Main {
             x3.next = x4;
             DeleteDuplicates2.deleteDuplicates(x1);
         }
+
+        public static void LRUCache(){
+            LRUCache l = new LRUCache(1);
+            l.set(2, 1);
+            l.get(2);
+            l.set(3, 2);
+            l.get(2);
+            l.get(3);
+        }
     }
 
     /**
@@ -238,6 +247,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.DeleteDuplicates2();
+        Test.LRUCache();
     }
 }
