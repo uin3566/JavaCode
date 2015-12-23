@@ -177,6 +177,23 @@ public class Main {
             n5.next = null;
             r.rotateRight(n1, 1);
         }
+
+        public static void AddLists(){
+            AddLists a = new AddLists();
+            ListNode x1 = new ListNode(1);
+            ListNode x2 = new ListNode(2);
+            ListNode x3 = new ListNode(3);
+            ListNode y1 = new ListNode(9);
+            ListNode y2 = new ListNode(8);
+            ListNode y3 = new ListNode(7);
+            ListNode y4 = new ListNode(6);
+            x1.next = x2;
+            x2.next = x3;
+            y1.next = y2;
+            y2.next = y3;
+            y3.next = y4;
+            ListNode z = a.addLists(x1, y1);
+        }
     }
 
     /**
@@ -184,6 +201,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.RotateRight();
+        Test.AddLists();
     }
 }
