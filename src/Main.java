@@ -220,6 +220,17 @@ public class Main {
             x2.next = x3;
             DeleteDuplicates.deleteDuplicates(x1);
         }
+
+        public static void DeleteDuplicates2(){
+            ListNode x1 = new ListNode(1);
+            ListNode x2 = new ListNode(2);
+            ListNode x3 = new ListNode(5);
+            ListNode x4 = new ListNode(5);
+            x1.next = x2;
+            x2.next = x3;
+            x3.next = x4;
+            DeleteDuplicates2.deleteDuplicates(x1);
+        }
     }
 
     /**
@@ -227,6 +238,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.DeleteDuplicates();
+        Test.DeleteDuplicates2();
     }
 }
