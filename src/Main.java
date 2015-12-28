@@ -240,6 +240,18 @@ public class Main {
             l.get(2);
             l.get(3);
         }
+
+        public static void SortedListToBST(){
+            SortedListToBST s = new SortedListToBST();
+            ListNode x1 = new ListNode(1);
+            ListNode x2 = new ListNode(2);
+            ListNode x3 = new ListNode(3);
+            ListNode x4 = new ListNode(5);
+            x1.next = x2;
+            x2.next = x3;
+            x3.next = x4;
+            s.sortedListToBST(x1);
+        }
     }
 
     /**
@@ -247,6 +259,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.LRUCache();
+        Test.SortedListToBST();
     }
 }
