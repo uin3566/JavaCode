@@ -252,6 +252,20 @@ public class Main {
             x3.next = x4;
             s.sortedListToBST(x1);
         }
+
+        public static void MergeKLists(){
+            MergeKLists m = new MergeKLists();
+            List<ListNode> lists = new ArrayList<>();
+            ListNode x1 = new ListNode(2);
+            ListNode x2 = new ListNode(4);
+            x1.next = x2;
+            ListNode y = null;
+            ListNode z = new ListNode(-1);
+            lists.add(x1);
+            lists.add(y);
+            lists.add(z);
+            m.mergeKLists(lists);
+        }
     }
 
     /**
@@ -259,6 +273,6 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Test.SortedListToBST();
+        Test.MergeKLists();
     }
 }
